@@ -1,6 +1,6 @@
 body {
-    background-color: #0c0c0c;
-    /* background-color: #27292d; */
+    /* background-color: #0c0c0c; */
+    background-color: #1f2024;
     font-size: 14px;
     line-height: 1.6;
     font-family: "Montserrat",sans-serif;
@@ -14,6 +14,17 @@ body {
     font-weight: 900;
     line-height: 1;
     z-index: 1;
+}
+.welcome a {
+    max-width: 250px;
+    text-decoration: none;
+    /* color: #282828; */
+    color: #c3c3c3;
+    -webkit-transition: color .2s ease-in-out;
+    transition: color .2s ease-in-out;
+}
+.welcome a:hover {
+    color: #007bff;
 }
 .welcome .avartar {
     max-width: 300px;
@@ -30,14 +41,20 @@ body {
     bottom: 0;
     height: 100%;
     width: 100vw;
-    background-color: #1f2024;
+    /* background-color: #1f2024; */
+    background-color: #0c0c0c;
 }
 .welcome .col-left,
 .welcome .col-right {
     height: 100vh;
 }
 
-
+.sec-pad {
+    padding-bottom: 150px;
+}
 .contact-infos {
     border-top: 1px solid #eeeeee;
+}
+.progress {
+    height: 0.5rem;
 }
