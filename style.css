@@ -1,0 +1,43 @@
+body {
+    background-color: #0c0c0c;
+    /* background-color: #27292d; */
+    font-size: 14px;
+    line-height: 1.6;
+    font-family: "Montserrat",sans-serif;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+}
+.welcome h1 {
+    position: relative;
+    font-size: 68px;
+    font-weight: 900;
+    line-height: 1;
+    z-index: 1;
+}
+.welcome .avartar {
+    max-width: 300px;
+    width: 100%;
+}
+
+.col-right:before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: 16px;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100vw;
+    background-color: #1f2024;
+}
+.welcome .col-left,
+.welcome .col-right {
+    height: 100vh;
+}
+
+
+.contact-infos {
+    border-top: 1px solid #eeeeee;
+}
