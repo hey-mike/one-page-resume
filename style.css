@@ -3,11 +3,12 @@ body {
     background-color: #1f2024;
     font-size: 14px;
     line-height: 1.6;
-    font-family: "Montserrat",sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: #fff;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
 }
+
 .welcome h1 {
     position: relative;
     font-size: 68px;
@@ -15,6 +16,7 @@ body {
     line-height: 1;
     z-index: 1;
 }
+
 .welcome a {
     max-width: 250px;
     text-decoration: none;
@@ -23,9 +25,11 @@ body {
     -webkit-transition: color .2s ease-in-out;
     transition: color .2s ease-in-out;
 }
+
 .welcome a:hover {
     color: #007bff;
 }
+
 .welcome .avartar {
     max-width: 300px;
     width: 100%;
@@ -44,6 +48,7 @@ body {
     /* background-color: #1f2024; */
     background-color: #0c0c0c;
 }
+
 .welcome .col-left,
 .welcome .col-right {
     height: 100vh;
@@ -52,9 +57,29 @@ body {
 .sec-pad {
     padding-bottom: 150px;
 }
+
 .contact-infos {
     border-top: 1px solid #eeeeee;
 }
+
 .progress {
     height: 0.5rem;
+}
+
+#fp-nav.left::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 2px;
+    height: 70%;
+    max-height: 750px;
+    background-color: #555;
+    opacity: .35;
+    z-index: 10;
+}
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+    background: #fff !important;
 }
