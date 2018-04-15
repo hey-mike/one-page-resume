@@ -37,7 +37,11 @@ body {
 .contact-infos {
     border-top: 1px solid #eeeeee;
 }
-
+@media (max-width: 774px) {
+    .contact-infos li{
+        width: 100%;
+    }
+}
 .progress {
     height: 0.5rem;
 }
