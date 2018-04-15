@@ -30,30 +30,6 @@ body {
     color: #007bff;
 }
 
-.welcome .avartar {
-    max-width: 300px;
-    width: 100%;
-}
-
-.col-right:before {
-    content: '';
-    display: block;
-    position: absolute;
-    z-index: -1;
-    left: 16px;
-    top: 0;
-    bottom: 0;
-    height: 100%;
-    width: 100vw;
-    /* background-color: #1f2024; */
-    background-color: #0c0c0c;
-}
-
-.welcome .col-left,
-.welcome .col-right {
-    height: 100vh;
-}
-
 .sec-pad {
     padding-bottom: 150px;
 }
@@ -66,11 +42,29 @@ body {
     height: 0.5rem;
 }
 
+#fp-nav.left {
+    left: 100px !important;
+}
+
+#fp-nav.left {
+    position: absolute;
+    left: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
 #fp-nav.left::before {
     content: "";
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 13px;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     width: 2px;
@@ -80,6 +74,60 @@ body {
     opacity: .35;
     z-index: 10;
 }
-#fp-nav ul li a span, .fp-slidesNav ul li a span {
+
+@media (max-width: 1180px) {
+    #fp-nav {
+        visibility: hidden;
+    }
+}
+
+#fp-nav ul {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100px;
+    height: 70%;
+    max-height: 750px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+    z-index: 10;
+}
+
+#fp-nav ul li {
+    top: -5px;
+    color: #fff;
+    font-size: 6px;
+    cursor: pointer;
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
     background: #fff !important;
+}
+
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span {
+    background: #007bff !important;
+}
+
+#fp-nav a+.fp-tooltip {
+    transition: opacity 0.3s;
+    -webkit-transition: opacity 0.3s;
+}
+
+#fp-nav a.active+.fp-tooltip {
+    opacity: 1;
+    width: 100px;
+    top: -4px;
 }
