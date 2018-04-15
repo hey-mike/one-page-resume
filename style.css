@@ -30,29 +30,41 @@ body {
     color: #007bff;
 }
 
-.sec-pad {
-    padding-bottom: 150px;
+.section .content {
+    max-width: 700px;
+    margin: 0 auto;
 }
+
+/* @media (min-width: 774px) {
+    .section .content {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+} */
 
 .contact-infos {
     border-top: 1px solid #eeeeee;
 }
+
 @media (max-width: 774px) {
-    .contact-infos li{
+    .contact-infos li {
         width: 100%;
     }
 }
+
 .progress {
     height: 0.5rem;
 }
 
 #fp-nav.left {
-    left: 100px !important;
+    left: 120px !important;
 }
 
 #fp-nav.left {
     position: absolute;
+    top: 0;
     left: 0;
+    margin-top: 0 !important;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -123,15 +135,48 @@ body {
 #fp-nav ul li a.active span,
 .fp-slidesNav ul li a.active span {
     background: #007bff !important;
+    height: 16px !important;
+    width: 16px !important;
+    left: 4px !important;
+    top: 4px !important;
 }
+
+@keyframes blinker {
+    from {
+        opacity: 1.0;
+    }
+    to {
+        opacity: 0.0;
+    }
+}
+
+@-webkit-keyframes blinker {
+    from {
+        opacity: 1.0;
+    }
+    to {
+        opacity: 0.0;
+    }
+}
+
+#fp-nav a.active {
+    text-decoration: blink;
+    animation-name: blinker;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-direction: alternate;
+}
+
 
 #fp-nav a+.fp-tooltip {
-    transition: opacity 0.3s;
-    -webkit-transition: opacity 0.3s;
+    opacity: 1 !important;
+    width: 100px !important;
+    top: -4px !important;
 }
 
-#fp-nav a.active+.fp-tooltip {
-    opacity: 1;
-    width: 100px;
-    top: -4px;
-}

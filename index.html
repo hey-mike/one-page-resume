@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="lib/jquery.fullpage.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/hover-min.css">
     <title>Michael's Resume</title>
 </head>
 
@@ -16,7 +17,7 @@
     <div id="fullpage">
         <div class="container">
             <section id="welcome" class="section welcome">
-                <div>
+                <div class="content">
                     <h3>Hello, I am </h3>
                     <h1>Michael
                         <br>
@@ -52,64 +53,68 @@
                 </div>
             </section>
             <section id="about" class="section about">
-                <div class="row">
-                    <div class="col-md-3 col-left">
-                        <h2>About</h2>
-                        <h6>A little about me</h6>
-                    </div>
-                    <div class="col-md-9 col-right d-flex align-items-center sec-pad">
-                        <p>Specializing in software design and development, broad range knowledge of different technology stacks,
-                            accomplished in object-oriented programming and software development lifecycle. I am also well
-                            versed in user experience design and have proven ability to work effectively as part of a team
-                            and individually.</p>
-
-                    </div>
+                <div class="content">
+                    <h2>About</h2>
+                    <h5>A little about me</h5>
+                    <br>
+                    <p>Specializing in software design and development, broad range knowledge of different technology stacks,
+                        accomplished in object-oriented programming and software development lifecycle. I am also well versed
+                        in user experience design and have proven ability to work effectively as part of a team and individually.</p>
                 </div>
-
             </section>
             <section id="skills" class="section skills">
-                <div class="row display-f dark-bg">
-                    <div class="col-md-3 col-left">
-                        <div class="sec-title dk">
-                            <h2>Skills</h2>
-                            <h6>What I love to do</h6>
+                <div class="content">
+                    <h2>Skills</h2>
+                    <h5>What I love to do</h5>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-md-6 py-2">
+                            <div class="d-flex justify-content-between">
+                                <h6 class="skill-name">JavaScript</h6>
+                                <div class="skill-val">
+                                    <span class="counter">95</span>%</div>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+                                    aria-valuemax="100" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 py-2">
+                            <div class="d-flex justify-content-between">
+                                <h6 class="skill-name">NodeJS</h6>
+                                <div class="skill-val">
+                                    <span class="counter">95</span>%</div>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+                                    aria-valuemax="100" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 py-2">
+                            <div class="d-flex justify-content-between">
+                                <h6 class="skill-name">AngularJS/ReactJS</h6>
+                                <div class="skill-val">
+                                    <span class="counter">95</span>%</div>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+                                    aria-valuemax="100" style="width: 80%"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 py-2">
+                            <div class="d-flex justify-content-between">
+                                <h6 class="skill-name">HTML5, CSS3</h6>
+                                <div class="skill-val">
+                                    <span class="counter">80</span>%</div>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+                                    aria-valuemax="100" style="width: 80%"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-9 col-right d-flex align-items-center">
-                        <div class="row w-100 pl-5">
-                            <div class="col-md-6">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="skill-name">JavaScript</h6>
-                                    <div class="skill-val">
-                                        <span class="counter">95</span>%</div>
-                                </div>
-                                <div class="bt-skill">
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-                                            aria-valuemax="100" style="width: 80%"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="skill-name">HTML5, CSS3</h6>
-                                    <div class="skill-val">
-                                        <span class="counter">80</span>%</div>
-                                </div>
-                                <div class="bt-skill">
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-                                            aria-valuemax="100" style="width: 80%"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6"></div>
-                            <div class="col-md-6"></div>
-                            <div class="col-md-6"></div>
-                        </div>
-                    </div>
-
                 </div>
             </section>
             <section id="experiences" class="section experiences"></section>
@@ -143,6 +148,7 @@
             });
         });
     </script>
+    <div class="absolute">This div element has position: absolute;</div>
 </body>
 
 </html>
